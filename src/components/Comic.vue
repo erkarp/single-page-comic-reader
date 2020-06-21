@@ -18,7 +18,7 @@ export default {
   props: ['xkcd'],
   computed: {
     permalink: function () {
-      return `${COMIC_IMAGE}${this.xkcd.file}`
+      return `${process.env.COMIC_IMAGE_PATH}/${this.xkcd.file}`
     }
   }
 }

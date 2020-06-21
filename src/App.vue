@@ -58,7 +58,7 @@ export default {
     fetchComics () {
       const _this = this
 
-      axios.get(`${COMIC_FEED}/?page=${++_this.page}`)
+      axios.get(`${process.env.COMIC_FEED}/xkcd/?page=${++_this.page}`)
         .then(response => {
           if (response.data.comics) {
             _this.comics = _this.comics.concat(response.data.comics)
